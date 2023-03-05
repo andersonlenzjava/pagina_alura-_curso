@@ -1,0 +1,186 @@
+/* reset css simplificado */
+* {
+    margin: 0;
+    padding: 0;
+}
+
+/* casamento entre figma e html */
+:root {
+    --branco-principal: #ffffff;
+    --cinza-secundario: #c0c0c0;
+    --botao-azul: #167bf7;
+    --cor-de-fundo: #00030c;
+    --botao-azul-hover: #60a2f3;
+
+    --fonte-principal: 'Inter';
+}
+
+body {
+    background-color: var(--cor-de-fundo);
+    color: var(--branco-principal);
+    font-family: var(--fonte-principal);
+    font-size: 16px;
+    font-weight: 400;
+}
+
+.principal {
+    background-image: url("img/Background.png");
+    background-repeat: no-repeat;
+    background-size: contain; /*para todo o container que está incerido*/
+    /* alinha os itens no centro da coluna do grid  */
+    align-items: center;
+    /* alinha tudo que estiver dentor do bloco inclusive imagens  */
+    text-align: center;
+}
+
+/* classe de estilo que posso aplicar a mais containers */
+.container {
+    height: 100vh;
+    display: grid;
+    /* cria duas colunas de 50% , posso criar o numero de colunas que quiser. legal para responsivo*/
+    /* ver com ferramenta do dev a divisao */
+    grid-template-columns: 50% 50%;
+}
+
+.container__caixa {
+    margin: 0 6em;
+}
+
+.container__titulo {
+    font-size: 28px;
+    font-weight: 700;
+}
+
+.container__imagem {
+    /* horas do relógio */
+    margin: 1em 0 2em 0;
+}
+
+.container__botao {
+    background-color: var(--botao-azul);
+    border-radius: 5px;
+    padding: 1em;
+    color: var(--branco-principal);
+    text-decoration: none;
+    /* ocupa 100% da linha  dentro da coluna no caso */
+    display: block;
+    margin-bottom: 1em;
+}
+
+.container__botao:hover {
+    background-color: var(--botao-azul-hover);
+    color: var(--cor-de-fundo);
+}
+
+.botao_secundario {
+    background-color: transparent;
+    border: 2px solid var(--branco-principal);
+}
+
+.container__aviso {
+    font-size: 12px;
+    color: var(--cinza-secundario);
+}
+
+/* secundario ----------------------------------- */
+
+/* 80% do container que está incerrido  */
+.secundario__imagem {
+    width: 80%;
+}
+
+/* margin do container inteiro */
+.secundario {
+    align-items: center;
+    margin: 0 10em;
+}
+
+.descricao__titulo {
+    font-weight: 700;
+    font-size: 48px;
+    color: var(--branco-principal);
+    margin-bottom: 0.1em;
+}
+
+.descricao__texto {
+    color: var(--cinza-secundario);
+}
+
+/* terciario ------------------------------------- */
+
+.secundario__botao {
+    /* ele só ocupa o espaço do seu tamanho, e ocupa uma linha inteira */
+    display: inline-block;
+    margin-top: 1em;
+}
+
+.container__descricao {
+    padding: 2em;
+}
+
+/* lista de dispositivos -------------------------- */
+.dispositivos {
+    text-align: center;
+}
+
+.dispositivos_titulo {
+    font-size: 48px;
+    color: var(--branco-principal);
+}
+
+.dispositivos__lista {
+    display: flex;
+    justify-content: center;
+    list-style-type: none;
+    margin: 5em 0;
+}
+
+.lista__item {
+    font-size: 32px;
+    color: var(--branco-principal);
+}
+
+
+/* rodape --------------------------- */
+.rodape {
+    text-align: center;
+    margin-bottom: 99px;
+}
+
+.rodape__logo {
+    margin-bottom: 40px;
+}
+
+.rodape__lista {
+    display: flex;
+    list-style-type: none;
+    justify-content: center;
+    gap: 16px;
+    margin-bottom: 24px;
+}
+
+.lista__link > a {
+    text-decoration: none;
+    color: var(--branco-principal);
+    font-size: 16px;
+    font-weight: 400;
+}
+
+.lista__link a:hover {
+    color: var(--botao-azul);
+}
+
+.lista__link a:active {
+    color: paleturquoise;
+}
+
+.rodape__texto {
+    margin: 0 120px;
+    color: var(--cinza-secundario);
+    font-weight: 400;
+    font-size: 14px;
+}
+
+.rodape__texto:first-of-type {
+    margin-bottom: 24px;
+}
